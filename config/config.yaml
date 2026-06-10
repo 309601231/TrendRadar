@@ -199,10 +199,10 @@ display:
     hotlist: true # 热榜区域：关键词匹配 / AI 智能筛选（true=显示, false=隐藏）
     new_items: false # 新增热点区域：含热榜新增 + RSS 新增（true=显示, false=隐藏）
     rss: true # RSS 订阅区域（true=显示并分析, false=隐藏并跳过分析）
-    standalone: false # 独立展示区：完整热榜/RSS，不受关键词过滤（true=显示, false=隐藏）
+    standalone: true # 独立展示区：完整热榜/RSS，不受关键词过滤（true=显示, false=隐藏）
     ai_analysis: true # AI 分析区域（true=显示, false=隐藏）
   standalone:
-    platforms: ["zhihu", "baidu"]     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
+    platforms: ["toutiao","douyin", "zhihu", "baidu"]     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
     rss_feeds: []                                # RSS 源 ID 列表（如 ["hacker-news"]）
     max_items: 10                                # 每个源最多展示条数（0=不限制）
 
@@ -382,7 +382,7 @@ ai_analysis:
                                     # 热榜优先占用配额，RSS 用剩余配额，独立展示区不受此限制
 
   include_rss: true                # 是否包含 RSS 内容进行分析（true=包含, false=不包含）
-  include_standalone: false          # 是否纳入独立展示区数据（true=纳入, false=不纳入）
+  include_standalone: true          # 是否纳入独立展示区数据（true=纳入, false=不纳入）
 
   include_rank_timeline: true       # 排名时间线详细程度
                                     # true = 完整轨迹（如 1(09:30)→2(10:00)），AI 分析更准但多耗 0.5~1 倍 token
